@@ -5,6 +5,10 @@ sources:
     tables:
       - name: customers
 
+      - name: partsupps 
+      - name: nations
+      - name: regions
+
       - name: suppliers
       - name: orders
         config:

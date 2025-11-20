@@ -4,7 +4,7 @@ n.nation_id,
 n.name as nation_name,
 n.region_id ,
 r.name as region_name,
-n.comment as nation_comment,
+--n.comment as nation_comment,
 r.comment as region_comment
 from {{ ref('stg_nations')}} n
 join {{ ref('stg_regions')}} r
