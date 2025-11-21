@@ -1,3 +1,6 @@
+{{config(tags='sample',
+{#pre_hook= ("use warehouse test_wh"), post_hook = "select * from ANALYTICS.DBT_AMISHRA.stg_regions")#}
+}}
 with abcd as (
 select 
    c_custkey as customer_id,
@@ -9,7 +12,7 @@ select
    c_mktsegment as market_segment,
    c_comment as comment
    
-from {{ source('src','customers')}} limit 100
+from {{ source('src','customers')}}
 ) 
 
 select * from abcd
