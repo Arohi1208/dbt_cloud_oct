@@ -1,17 +1,3 @@
-mkmall:
-  outputs:
-    dev:
-      account: BWB47273
-      database: analytics
-      password: Sachin$123
-      role: analyticsengineer
-      schema: dbt_arohi
-      threads: 3
-      type: snowflake
-      user: sachin
-      warehouse: TRANSFORM_WH
-  target: dev
-
 dbt_cloud:
   outputs:
     dev:
@@ -25,4 +11,5 @@ dbt_cloud:
       user: sachin
       warehouse: TRANSFORM_WH
   target: dev
+
 
