@@ -1,6 +1,4 @@
-{{config(tags='sample',
-{#pre_hook= ("use warehouse test_wh"), post_hook = "select * from ANALYTICS.DBT_AMISHRA.stg_regions")#}
-}}
+{{config(tags='sample')}}
 with abcd as (
 select 
    c_custkey as customer_id,
