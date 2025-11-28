@@ -14,6 +14,21 @@ file_format=(type=csv compression = none null_if=(' ')) header=true; ") %}
 {% endmacro %}
 
 
+{% macro run_metadata() %}
+{
+    "invocation_id": "{{ invocation_id }}",
+    "run_started_at": "{{ run_started_at }}"
+}
+{% endmacro %}
+
+{% macro dbt_meta() -%}
+  '{{invocation_id}}'::varchar as dbt_batch_id,
+  '{{run_started_at}}'::timestamp as dbt_batch_ts
+{% endmacro %}
+
+
+
+
 
 
 
