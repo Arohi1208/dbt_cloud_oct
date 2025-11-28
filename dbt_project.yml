@@ -39,8 +39,8 @@ models:
   Analytics:
     stage:
       +materialized: table
-<<<<<<< HEAD
+
 flags:
   require_generic_test_arguments_property: true
-=======
->>>>>>> 77dc9164f9ea1bc1abc09a26a38158b1e513d4a5
+
+
