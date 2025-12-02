@@ -7,7 +7,7 @@ with dy as (
 select 
 c.customer_id as customer_id, 
 c.name as customer_name,
-c.c_nationkey as nation_name,
+c.c_nation_id as nation_key,
 max(o.order_date) as last_ordered_at,
 min(o.order_date) as first_ordered_at,
 count(o.order_id) as lifetime_orders,
@@ -22,7 +22,7 @@ join {{ ref('stg_orders') }} o
 on c.customer_id=o.customer_id
 join {{ ref('stg_line_items') }} l
 on o.order_id=l.order_id
-group by c.customer_id,c.name,c.c_nationkey
+group by c.customer_id,c.name,c.c_nation_id
 
     )
 select * from dy
